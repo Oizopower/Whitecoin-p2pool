@@ -34,7 +34,7 @@ nets = dict(
         SUBSIDY_FUNC=lambda bitcoind, target: 30000*100000000,
         BLOCK_PERIOD=90, # s
         SYMBOL='WC',
-        CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'whiteCoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/whiteCoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.whitecoin'), 'whitecoin.conf'),
+        CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'Whitecoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/Whitecoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.Whitecoin'), 'Whitecoin.conf'),
         BLOCK_EXPLORER_URL_PREFIX='http://testnet/block/',
         ADDRESS_EXPLORER_URL_PREFIX='http://testnet/address/',
         TX_EXPLORER_URL_PREFIX='http://testnet/tx/',
