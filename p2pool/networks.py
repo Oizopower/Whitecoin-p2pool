@@ -22,8 +22,8 @@ nets = dict(
         MAX_TARGET=2**256//2**20 - 1,
         PERSIST=True,
         WORKER_PORT=8343,
-        BOOTSTRAP_ADDRS='198.52.200.75'.split(' '),
-        ANNOUNCE_CHANNEL='#p2pool-alt',
+        BOOTSTRAP_ADDRS='freebtc.eu'.split(' '),
+        ANNOUNCE_CHANNEL='#p2pool-wc',
         VERSION_CHECK=lambda v: v >= 60011,
     ),
     whitecoin_testnet=math.Object(
