@@ -43,15 +43,15 @@ nets = dict(
         DUST_THRESHOLD=0.01e8,
     ),
     whitecoin_testnet=math.Object(
-        P2P_PREFIX='fef5abaa'.decode('hex'),
-        P2P_PORT=15714,
-        ADDRESS_VERSION=73,
-        RPC_PORT=15715,
+        P2P_PREFIX='eaceedcd'.decode('hex'),
+        P2P_PORT=25714,
+        ADDRESS_VERSION=111,
+        RPC_PORT=25715,
         RPC_CHECK=defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
             'Whitecoinaddress' in (yield bitcoind.rpc_help()) and
             (yield bitcoind.rpc_getinfo())['testnet']
         )),
-        SUBSIDY_FUNC=lambda bitcoind, target: 10000*100000000,
+        SUBSIDY_FUNC=lambda bitcoind, target: 30000*100000000,
         BLOCK_PERIOD=90, # s
         SYMBOL='WC',
         CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'whiteCoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/whiteCoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.whitecoin'), 'whitecoin.conf'),
